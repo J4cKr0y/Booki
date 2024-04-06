@@ -57,12 +57,63 @@ a {
 .neutral-star {
     color: var(--main-bg-color)
 }
-
 /****** Select ***********/
+.selected {
+   color: #0065FC;
+   border-top: solid;
+   text-align: right;
+   margin: 5%;
+}
+.unselected {
+   text-align: right;
+}
 
 /****** Search ***********/
 
+.lock {
+  background-color: #F2F2F2;
+  border-radius: 25% 0 0 25%;
+  padding: 1% 1.5%; 
+  margin-right: 0px;
+  width: 120%;
+}
+
+input {
+  padding: 1%; 
+  margin-right: 0px;
+  padding-top: 1.5%;
+  padding-bottom: 1.1%;
+  border: none;
+  outline: none;
+}
+
+button {
+  background-color: #0065FC;
+  color: white;
+  border-radius: 0 20% 20% 0;
+  padding: 1%; 
+  margin-left: 0px; 
+  padding-top: 1.5%;
+  padding-bottom: 1.1%;
+  border: none;
+  outline: none;
+}
+
+button:hover {
+  background-color: #DEEBFF;
+  color: black;
+}
+
+
 /****** Filtres ***********/
+
+.butfilter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #F2F2F2;  /* Bords gris clair */
+    border-radius: 25%; /* rectangle bords arrondis */
+}
 
 /****** Info ***********/
 .info {
