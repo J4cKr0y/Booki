@@ -4,9 +4,9 @@
 }
 
 :root {
-    --main-color: #0065FC;
-    --main-bg-color: #F2F2F2;
-    --filter-bg-color: #DEEBFF;
+    --main-color: #0065FC; /*bleu*/
+    --main-bg-color: #F2F2F2; /*gris*/
+    --filter-bg-color: #DEEBFF; /*bleu clair*/
 }
 
 .fa-solid {
@@ -58,6 +58,31 @@ a {
     color: var(--main-bg-color)
 }
 
+/****** Select ***********/
+
+/****** Search ***********/
+
+/****** Filtres ***********/
+
+/****** Info ***********/
+.info {
+    display: flex;
+    justify-content: left;   
+}
+
+.circle {
+    border: 2px solid #F2F2F2; /* Bords gris clair */
+    border-radius: 50%; /* Cercle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1.5rem;
+    padding-top : 0rem;
+    padding-bottom : 0rem;
+    padding-right : 1.4rem;
+    padding-left : 1.4rem;  
+}
+
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
@@ -74,6 +99,84 @@ a {
 /****** Hebergements ***********/
 .hebergements {
     width: 65%;
+}
+
+.hebergements-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.hebergements-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  grid-template-rows: repeat(2, 50%); 
+  grid-gap:  5%;
+  margin-top: 33px;
+}
+
+.hebergements-1 {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.hebergements-2 {
+    grid-column: 2;
+    grid-row: 1;
+}
+.hebergements-3 {
+    grid-column: 3;
+    grid-row: 1;
+}
+.hebergements-4 {
+    grid-column: 1;
+    grid-row: 2;
+}
+.hebergements-5 {
+    grid-column: 2;
+    grid-row: 2;
+}
+.hebergements-6 {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.hebergements-cards .card {
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    margin-top: 33px;
+}
+
+
+.hebergements-cards img {
+    width: 90%;
+    height: 33%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    max-height: 33%;
+}
+
+.hebergements-cards .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hebergements-cards .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.hebergements-cards .card-subtitle {
+    margin: 0;
+}
+
+.hebergements-cards .card-rating {
+    margin-bottom: 5px;
 }
 
 /****** Populaires ***********/
@@ -121,7 +224,13 @@ a {
     margin-bottom: 5px;
 }
 
-
+/****** Activités ***********/
+.activity {
+    display: flex; /* Utilisation de flexbox pour aligner le contenu */
+    align-items: stretch; /* Centrage vertical */
+    overflow: hidden;
+  }
+/****** Footer ***********/
 
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
