@@ -118,21 +118,26 @@ button:hover {
 /****** Info ***********/
 .info {
     display: flex;
-    justify-content: left;   
+    align-items: center; 
+    gap: 1%;  
+}
+.i {
+    display: flex;
+    align-items: center; 
+    margin-right: 2rem;
 }
 
 .circle {
     border: 2px solid #F2F2F2; /* Bords gris clair */
-    border-radius: 50%; /* Cercle */
+    border-radius: 100%; /* Cercle */
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 1.5rem;
-    padding-top : 0rem;
-    padding-bottom : 0rem;
-    padding-right : 1.4rem;
-    padding-left : 1.4rem;  
+    padding : 0.5%;
+    position: absolute;
+    margin-right: 3rem;
 }
+
 
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
