@@ -117,27 +117,31 @@ button:hover {
 
 /****** Info ***********/
 .info {
+    height: 2rem;
     display: flex;
-    align-items: center; 
-    gap: 1%;  
+    justify-content: left; 
+    align-items: center;
+    padding-bottom: 0.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 .i {
     display: flex;
-    align-items: center; 
+    height: 1rem;
+    width: 1rem;
     margin-right: 2rem;
 }
 
 .circle {
-    border: 2px solid #F2F2F2; /* Bords gris clair */
-    border-radius: 100%; /* Cercle */
+    border: 2px solid #F2F2F2;
+    border-radius: 50%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding : 0.5%;
-    position: absolute;
-    margin-right: 3rem;
+    margin-right: 1.5rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
 }
-
 
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
@@ -163,13 +167,11 @@ button:hover {
     align-items: center;
 }
 
-
 .hebergements-grid {
   display: grid;
   grid-template-columns: repeat(3, 30%);
-  grid-template-rows: repeat(2, 50%); 
+  grid-template-rows: repeat(2, 40%); 
   grid-gap:  5%;
-  margin-top: 33px;
 }
 
 .hebergements-1 {
@@ -207,13 +209,11 @@ button:hover {
     margin-top: 33px;
 }
 
-
 .hebergements-cards img {
-    width: 90%;
-    height: 33%;
+    width: 100%;
+    height: 136px; /*33%;*/
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    max-height: 33%;
 }
 
 .hebergements-cards .card-content {
@@ -233,6 +233,10 @@ button:hover {
 
 .hebergements-cards .card-rating {
     margin-bottom: 5px;
+}
+
+.plus {
+    padding-bottom:30px;
 }
 
 /****** Populaires ***********/
@@ -282,11 +286,54 @@ button:hover {
 
 /****** Activités ***********/
 .activity {
-    display: flex; /* Utilisation de flexbox pour aligner le contenu */
-    align-items: stretch; /* Centrage vertical */
-    overflow: hidden;
+    display: flex; 
+    justify-content: space-evenly;
+    overflow: hidden; /* Cache les choses qui dépassent du div */
   }
-/****** Footer ***********/
+
+  .activity-card {
+      width: 20rem;
+      height: 100%;
+      background-color: #ffffff; /* Fond blanc */
+      border-radius: 5%; /* Coins arrondis */
+      filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1)); /* Ombre portée */
+      display: flex;
+      flex-direction: column; /* Alignement vertical */
+      justify-content: center; 
+      margin-left: auto;
+      margin-right: auto;
+      overflow: hidden; /* Cache les choses qui dépassent du div */
+  }
+  
+  /* Style pour l'image */
+  .activity-card img {
+       height: 90%;
+       width: auto;
+       border-radius: 5% 5% 0 0; /* Coins arrondis seulement en haut */
+       object-fit: cover;
+    }
+  
+  /* Style pour le texte */
+  .activity-card h3 {
+    font-size: 16px;
+    text-align: start; /* texte à gauche horizontalement */
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    flex-direction:row;
+    background-color: var(--main-bg-color);
+    box-sizing: border-box;
+    justify-content:space-between;
+    padding-right: 25%;
+    padding-left: 1%;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction:column;
+}  
 
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
