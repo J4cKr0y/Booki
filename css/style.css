@@ -23,6 +23,9 @@ body {
     max-width: 1440px;
     padding: 0 50px;
     box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
 }
 
 a {
@@ -57,46 +60,114 @@ a {
 .neutral-star {
     color: var(--main-bg-color)
 }
+
+
 /****** Select ***********/
+.select_all {
+  display: flex;
+  justify-content: flex-end;
+  height: 2rem;
+  width: 100%;
+}
+
 .selected {
-   color: #0065FC;
-   border-top: solid;
-   text-align: right;
-   margin: 5%;
+  height: 1rem;
+  width: 12%;
+  color: #0065FC;
+  border-top: solid;
+  text-align: left;
 }
 .unselected {
-   text-align: right;
+  height: 1rem;
+  width: 12%;
+  text-align: right;
 }
+
+.unselected:hover {
+   color: #0065FC;
+   border-top: solid;
+} 
+
+/****** NavSelect ***********/
+.navselect_all {
+    display: flex;
+    justify-content: space-between;
+    height: 2rem;
+   /* width: 100%;*/
+    visibility: hidden;
+  }
+  
+  .navselected {
+    height: 2rem;
+    width: 50%;
+    color: #0065FC;
+    border-bottom: solid;
+    text-align: center;
+  }
+  .navunselected {
+    height: 2rem;
+    width: 50%;
+    text-align: center;
+    border-color: #F2F2F2;
+  }
+  
+  .navunselected:hover {
+     color: #0065FC;
+     border-bottom: solid;
+  } 
+
 
 /****** Search ***********/
 
+.search{
+    display: flex;
+    width: 50%;
+    height: 2.5rem;   
+}
+
 .lock {
+  display: flex;
   background-color: #F2F2F2;
   border-radius: 25% 0 0 25%;
   padding: 1% 1.5%; 
   margin-right: 0px;
-  width: 120%;
+  width: 1rem;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center;
+}
+
+.fa-location-dot{
+color: black;
 }
 
 input {
-  padding: 1%; 
-  margin-right: 0px;
   padding-top: 1.5%;
-  padding-bottom: 1.1%;
+  padding-bottom: 1.5%;
+  padding-left: 2rem;
+  padding-right: 2rem;
   border: none;
   outline: none;
+}
+
+input::placeholder {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
 }
 
 button {
   background-color: #0065FC;
   color: white;
   border-radius: 0 20% 20% 0;
-  padding: 1%; 
-  margin-left: 0px; 
-  padding-top: 1.5%;
-  padding-bottom: 1.1%;
+  padding-left: 1rem;
+  padding-right: 1rem;
   border: none;
   outline: none;
+}
+
+.fa-magnifying-glass {
+color: white;  
 }
 
 button:hover {
@@ -104,15 +175,48 @@ button:hover {
   color: black;
 }
 
+.button_lite {
+    visibility: hidden;
+    background-color: #0065FC;
+    color: white;
+    border-radius: 0 20% 20% 0;
+    padding: 1%; 
+    margin-left: 0px; 
+    border: none;
+    outline: none;
+}
 
 /****** Filtres ***********/
 
-.butfilter {
+.filter {
     display: flex;
-    justify-content: center;
+    justify-content: left; 
     align-items: center;
-    border: 2px solid #F2F2F2;  /* Bords gris clair */
-    border-radius: 25%; /* rectangle bords arrondis */
+    gap: 1%;  
+}
+
+.filtitle {
+    display: flex;
+    justify-content: left; 
+    align-items: center;
+    gap: 1%;  
+}
+
+.butfilter {
+    height: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 3px solid #F2F2F2;  /* Bords gris */
+    border-radius: 25% / 100%; /* rectangle bords arrondis */
+    padding-left:1.5%;
+    padding-right:1.5%;
+    gap: 1rem;
+}
+
+.butfilter:hover {
+  background-color: #DEEBFF;
+  color: black;
 }
 
 /****** Info ***********/
@@ -335,7 +439,6 @@ button:hover {
     flex-direction:column;
 }  
 
-
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
@@ -371,9 +474,124 @@ button:hover {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+
+    .activity-card {
+        width: 12rem;
+    }
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+
+    /****** General phone ****/
+    .section-title {
+        text-align: center;
+    }
+
+    /****** Select phone*******/
+    .select_all {
+        display: none;
+    }
+    /****** NavSelect phone ****/
+    .navselect_all {
+        visibility: visible;
+        width: 100%;
+    }
+    /****** Search phone **********/
+    .search{
+        width: 100%;
+        align-content: stretch;
+    }
+    button{
+        display: none;
+    }
+    .button_lite{
+        visibility: visible;
+    }
+    /****** Filtres phone ***********/
+    .filter {
+        height: 8rem;
+        gap: 1rem;  
+        flex-wrap: wrap;
+    }
+    
+    .butfilter {
+        clear:both;
+    }
+    
+    /****** Hebergements And Populaires phone ***********/
+    .hebergements-and-populaires {
+        flex-direction: column;
+    }
+    /****** Hebergements phone ***********/
+    .hebergements {
+        width: 100%;
+        order: 2;
+    } 
+    .hebergements-grid {
+        grid-template-columns: repeat(1, 100%);
+        grid-template-rows: repeat(6, 15%); 
+        grid-gap:  1%;
+    }
+
+    .hebergements-2 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .hebergements-3 {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .hebergements-4 {
+        grid-column: 1;
+        grid-row: 4;
+    }
+    .hebergements-5 {
+        grid-column: 1;
+        grid-row: 5;
+    }
+    .hebergements-6 {
+        grid-column: 1;
+        grid-row: 6;
+    }
+/****** Populaires phone ***********/
+.populaires {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 50px;
+    order: 1;
 }
+.populaires-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+.populaires-cards a {
+    width: 100%;
+}
+
+/****** Activités phone ***********/
+
+.activity {
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1.5%;
+  }
+
+.activity-card {
+    width: 100%;
+    height: 136px;  
+}
+/****** Footer phone **********/  
+.footer-content {
+    width: 100%;
+    flex-wrap: wrap;
+}  
+.footer-content a {
+    width: 100%;
+}
+}
+
