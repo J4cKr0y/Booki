@@ -512,6 +512,7 @@ input::placeholder {
     .hebergements-and-populaires {
         flex-direction: column;
         margin-bottom: 2rem;
+        margin-right: -2rem;
     }
  /**** Hebergements tablette *****/
     .hebergements {
@@ -521,6 +522,8 @@ input::placeholder {
     .populaires {
         width: 100%;
         margin-top: 50px;
+        margin-left: 0;
+
     }
     .populaires-cards {
         display: flex;
@@ -541,7 +544,8 @@ input::placeholder {
         display: flex;
         justify-content: space-evenly;
         width: 104%;
-        padding: 0;
+        padding-left: 0;
+
     }
     .activity-card {
         width: 12rem;
@@ -551,10 +555,16 @@ input::placeholder {
         height: 75%;
         width: 100%;
     }
-    /* Footer */
+/****** Footer tablette ******/
     .footer {
         margin-top: 3%;
-}
+    }
+    .footer-content {
+        padding-left: 2%;
+    } 
+    #assistance {
+        margin-right: -15%;
+    }  
 }
 
 /* Small devices (phones, less than 768px) */
