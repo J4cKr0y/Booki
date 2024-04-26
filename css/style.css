@@ -15,7 +15,7 @@
 
 body {
 
-    margin-top: -5px;
+    margin-top: -10px;
     display: flex;
     justify-content: center;
 }
@@ -60,7 +60,7 @@ a {
 }
 
 .neutral-star {
-    color: var(--main-bg-color)
+    color: var(--main-bg-color);
 }
 
 
@@ -82,7 +82,7 @@ a {
     padding-top: 0.7rem;
 }
 
-.selected:hover :focus :target {
+.selected:hover {
     color: var(--main-color);
     border-top: solid;
 } 
@@ -130,18 +130,11 @@ a {
 .navselected {
     height: 2rem;
     width: 50%;
-    color: var(--main-color);
-    border-bottom: solid;
-    text-align: center;
-}
-.navunselected {
-    height: 2rem;
-    width: 50%;
     text-align: center;
     border-color: var(--main-bg-color);
 }
   
-.navunselected:hover {
+.navselected:hover {
     color: var(--main-color);
     border-bottom: solid;
 } 
@@ -210,11 +203,15 @@ input::placeholder {
     visibility: hidden;
     background-color: var(--main-color);
     color: white;
-    border-radius: 0 20% 20% 0;
-    padding: 1%; 
-    margin-left: 0px; 
+    border-radius: 15px;
+    padding: 2.5%;
+    aspect-ratio: 1 / 1; 
+    margin-left: -15px; 
     border: none;
     outline: none;
+    align-content: center;
+    text-align: center;
+    filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.4)); /* Ombre portée */
 }
 
 /****** Filtres ***********/
@@ -239,9 +236,8 @@ input::placeholder {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 3px solid var(--main-bg-color); /* Bords gris */
-    border-radius: 30% / 100%; /* rectangle bords arrondis */
-    padding-left:1%;
+    border: 3px solid var(--main-bg-color); 
+    border-radius: 25px / 25px; 
     padding-right:1%;
     gap: 0.5rem;
     font-size: 16px;
@@ -292,7 +288,7 @@ input::placeholder {
 .hebergements {
     width: 65%;
 }
-/*ajouter une max-width pour éviter que ça déborde.*/
+
 .hebergements-title {
     display: flex;
     justify-content: space-between;
@@ -309,9 +305,10 @@ input::placeholder {
     grid-template-columns: repeat(3, 30%);
     grid-template-rows: repeat(2, 40%); 
     grid-column-gap: 2.45rem;
-    grid-row-gap: 0rem;
+    grid-row-gap: 0;
     margin-top: -1.5rem;
     margin-bottom: -4.5rem;
+    align-items: center;
 }
 
 .hebergements-1 {
@@ -428,7 +425,7 @@ input::placeholder {
 }
 
 /****** Activités ***********/
-.hebergements-title h2{
+#activites{
     padding-bottom: 3%;
 }
 
@@ -572,8 +569,26 @@ input::placeholder {
 @media (max-width: 767.98px) {
 
     /****** General phone ****/
+    .main-container {
+        padding: 0;
+    }
     .section-title {
         text-align: center;
+    }
+    /****** title ***********/
+
+    .title {
+        margin-top: 2rem;
+    }
+    .logo {
+        display: flex;
+        justify-content: center;
+        height:19px;
+        padding-bottom: 2rem;
+    }
+
+    .title h1 {
+        padding-top:0;
     }
 
     /****** Select phone*******/
@@ -584,13 +599,26 @@ input::placeholder {
     .navselect_all {
         visibility: visible;
         width: 100%;
+        font-size: 16px;
+        border-bottom: solid var(--main-bg-color);
     }
     /****** Search phone **********/
     .search{
         width: 100%;
-        align-content: stretch;
+        justify-content: center;
+        height: 3.2rem; 
+        margin-bottom: -0.5rem;
     }
-    button{
+    .lock {
+        aspect-ratio: 1 / 1;
+        padding: 2.5%;
+    }
+    input {
+
+        padding-right: 4.5rem;
+
+    }
+    #button{
         display: none;
     }
     .button_lite{
@@ -599,32 +627,51 @@ input::placeholder {
     /****** Filtres phone ***********/
     .filter {
         height: 8rem;
-        gap: 1rem;  
-        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 1rem;
+        padding-bottom: 2.5rem;
+    }
+    .filtitle {
+        margin-bottom: -1rem;  
     }
     
     .butfilter {
-        clear:both;
+        width: 40%;
+        justify-content: center;
     }
-    
+    /****** Info phone ***********/
+.info {
+    padding-top: 1rem;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+.circle {
+    margin-right: 0.5rem;
+}
     /****** Hebergements And Populaires phone ***********/
     .hebergements-and-populaires {
         flex-direction: column;
+    }
+    .hebergements-and-populaires section {
+      /*  background-color: transparent; */
     }
     /****** Hebergements phone ***********/
     .hebergements {
         width: 100%;
         order: 2;
+      /*  background-color: white; */
     } 
+    .hebergements-title {
+        margin-bottom: 1rem;
+    }
     .hebergements-grid {
         grid-template-columns: repeat(1, 100%);
         grid-template-rows: repeat(6, 15%); 
-        grid-gap:  1%;
+        height: 91rem;
     }
-
     .hebergements-2 {
         grid-column: 1;
-        grid-row: 2;
+        grid-row: 2;  
     }
     .hebergements-3 {
         grid-column: 1;
@@ -644,39 +691,62 @@ input::placeholder {
     }
 /****** Populaires phone ***********/
 .populaires {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 50px;
     order: 1;
+    margin-top: 2.3rem;
+    margin-left: -1rem;
+  /*  background-color: var(--main-bg-color); */
+}
+.populaires-title {
+    margin-top: 0;
+
 }
 .populaires-cards {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
 }
+.populaires-cards .card {
+    margin-top: 1.1rem;
+    margin-right: -1.3rem;
+}
+.populaires-cards img {
+    width: 37%;
+    height: 8.5rem;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
 .populaires-cards a {
     width: 100%;
 }
 
 /****** Activités phone ***********/
-
+#activites{
+    margin-top: -1.5rem;
+    padding-bottom: 9%;
+    margin-bottom: 1%;
+}
 .activity {
     flex-direction: column;
-    flex-wrap: wrap;
-    gap: 1.5%;
   }
 
 .activity-card {
     width: 100%;
-    height: 136px;  
+    height: 204px;  
+    margin-bottom: 1rem;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+.activity-card h3 {
+    padding-top: 0;
 }
 /****** Footer phone **********/  
+.footer {
+    flex-direction:column;
+    margin-top: 7%;
+}
 .footer-content {
     width: 100%;
-    flex-wrap: wrap;
+    padding: 1.5rem;
 }  
 .footer-content a {
     width: 100%;
