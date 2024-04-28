@@ -14,8 +14,7 @@
 }
 
 body {
-
-    margin-top: -10px;
+    margin-top: -11px;
     display: flex;
     justify-content: center;
 }
@@ -23,11 +22,12 @@ body {
 .main-container {
     width: 100%;
     max-width: 1440px;
-    padding: 0 50px;
     box-sizing: border-box;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0px;
+    padding-left: 3%;
+    padding-right: 2%;
 }
 
 a {
@@ -72,9 +72,10 @@ a {
     width: 100%;
     margin-top: 10px;
     padding: 0px;
-    gap: 2.5rem;
+    gap: 2.7rem;
+
 }
-/*active visited -focus- autofocus target */
+
 .selected {
     height: 1rem;
     width: 7rem;
@@ -92,6 +93,7 @@ a {
     width: 7rem;
     text-align: center;
     padding-top: 0.7rem;
+    margin-right: -1.5rem;
 }
 
 .unselected:hover {
@@ -103,7 +105,6 @@ a {
 
 .title {
     font-size: 22px;
-    margin-top: -9px;
 }
 
 .title img {
@@ -111,7 +112,7 @@ a {
 }
 
 .title h1 {
-    padding-top:2rem;
+    padding-top:0.2rem;
 }
 
 .title p {
@@ -120,7 +121,7 @@ a {
 }
 
 /****** NavSelect ***********/
-.navselect_all {
+.phoneselect_all {
     display: flex;
     justify-content: space-between;
     height: 2rem;
@@ -221,14 +222,18 @@ input::placeholder {
     justify-content: left; 
     align-items: center;
     gap: 1%;  
-    padding-top: 1.8rem;
+    padding-top: 1.8rem;   
 }
-
+.filter h2{
+font-size: 18px;
+font-weight: bolder;
+}
 .filtitle {
     display: flex;
     justify-content: left; 
     align-items: center;
     gap: 1%;  
+    
 }
 
 .butfilter {
@@ -238,16 +243,19 @@ input::placeholder {
     align-items: center;
     border: 3px solid var(--main-bg-color); 
     border-radius: 25px / 25px; 
-    padding-right:1%;
+    padding-left:1.2%;
+    padding-right:1.2%;
     gap: 0.5rem;
-    font-size: 16px;
-    font-family: 'Raleway', sans-serif;
+   
 }
 
 .butfilter:hover {
     background-color: var(--filter-bg-color);
     color: black;
+    cursor: url("../images/curseur/arrow-pointer.png"), default;
 }
+
+
 
 /****** Info ***********/
 .info {
@@ -259,11 +267,11 @@ input::placeholder {
     margin-bottom: 1.5rem;
 }
 
-.circle {
+.fa-info {
     border: 2px solid var(--main-bg-color);
-    border-radius: 50%;
+    border-radius: 100%;
     display: flex;
-    margin-right: 1.5rem;
+    margin-right: 0.5rem;
     padding-top: 0.6rem;
     padding-bottom: 0.6rem;
     padding-right: 0.5rem;
@@ -278,7 +286,6 @@ input::placeholder {
 }
 
 .hebergements-and-populaires section {
-    background-color: var(--main-bg-color);
     border-radius: 20px;
     padding: 30px;
     box-sizing: border-box;
@@ -287,18 +294,16 @@ input::placeholder {
 /****** Hebergements ***********/
 .hebergements {
     width: 65%;
+    background-color: var(--main-bg-color);
 }
 
 .hebergements-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 1.5rem;
 }
 
-#activites {
-    padding-left: 2rem;
-    margin-top: -1rem;
-}
 
 .hebergements-grid {
     display: grid;
@@ -376,12 +381,15 @@ input::placeholder {
 .plus {
     padding-top: 0.1rem;
     padding-bottom: 4rem;
+    font-size: 18px;
+    font-weight: bolder;
 }
 
 /****** Populaires ***********/
 .populaires {
     width: 32%;
     margin-left: 2rem;
+    background-color: var(--main-bg-color);
 }
 
 .populaires-title {
@@ -425,14 +433,17 @@ input::placeholder {
 }
 
 /****** Activités ***********/
-#activites{
+
+#activites {
+    width: 100%;
+    padding-left: 2rem;
+    margin-top: -1rem;
     padding-bottom: 3%;
 }
 
 .activity {
     display: ruby;
-    justify-content: space-evenly;
-    padding-inline: 1%;
+    
 }
 
 .activity-card {
@@ -447,6 +458,7 @@ input::placeholder {
     margin-right: auto;
     overflow: hidden; /* Cache les choses qui dépassent du div */
     margin-bottom: 2.5rem;
+
 }
   
 /* Style pour l'image */
@@ -491,7 +503,13 @@ input::placeholder {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
- /****** Filtres tablette *******/
+
+/****** General tablette *******/
+    .main-container {
+        padding-left: 4%;
+    }
+
+/****** Filtres tablette *******/
     .filter {
 
         flex-wrap: wrap;
@@ -509,7 +527,7 @@ input::placeholder {
     .hebergements-and-populaires {
         flex-direction: column;
         margin-bottom: 2rem;
-        margin-right: -2rem;
+        margin-right: 1.1rem;
     }
  /**** Hebergements tablette *****/
     .hebergements {
@@ -540,7 +558,7 @@ input::placeholder {
     .activity {
         display: flex;
         justify-content: space-evenly;
-        width: 104%;
+        width: 100%;
         padding-left: 0;
 
     }
@@ -560,7 +578,7 @@ input::placeholder {
         padding-left: 2%;
     } 
     #assistance {
-        margin-right: -15%;
+        margin-right: -11%;
     }  
 }
 
@@ -570,12 +588,15 @@ input::placeholder {
 
     /****** General phone ****/
     .main-container {
-        padding: 0;
+        padding-top: 10px;
+
     }
     .section-title {
         text-align: center;
     }
-    /****** title ***********/
+
+    
+    /****** title phone ******/
 
     .title {
         margin-top: 2rem;
@@ -596,27 +617,30 @@ input::placeholder {
         display: none;
     }
     /****** NavSelect phone ****/
-    .navselect_all {
+    .phoneselect_all {
         visibility: visible;
-        width: 100%;
+        width: 105%;
         font-size: 16px;
         border-bottom: solid var(--main-bg-color);
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-left: -1rem;
+        margin-right: -1rem;
     }
     /****** Search phone **********/
     .search{
-        width: 100%;
+        width: 90%;
         justify-content: center;
         height: 3.2rem; 
         margin-bottom: -0.5rem;
+        padding-left: 4%;
     }
     .lock {
         aspect-ratio: 1 / 1;
         padding: 2.5%;
     }
     input {
-
         padding-right: 4.5rem;
-
     }
     #button{
         display: none;
@@ -637,32 +661,36 @@ input::placeholder {
     
     .butfilter {
         width: 40%;
-        justify-content: center;
+        justify-content: left ;
+        padding-left: 5%;
     }
     /****** Info phone ***********/
-.info {
-    padding-top: 1rem;
-    padding-bottom: 0;
-    margin-bottom: 0;
-}
-.circle {
-    margin-right: 0.5rem;
-}
+    .info {
+        padding-top: 1rem;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+    .fa-info {
+        margin-right: 0.5rem;
+    }
     /****** Hebergements And Populaires phone ***********/
     .hebergements-and-populaires {
         flex-direction: column;
     }
     .hebergements-and-populaires section {
-      /*  background-color: transparent; */
+        border-radius:0;
+        padding: 0px;
     }
+ 
     /****** Hebergements phone ***********/
     .hebergements {
         width: 100%;
         order: 2;
-      /*  background-color: white; */
+        background-color: white; 
     } 
     .hebergements-title {
-        margin-bottom: 1rem;
+        margin-top: 2.5rem;
+        padding-bottom: 01rem;
     }
     .hebergements-grid {
         grid-template-columns: repeat(1, 100%);
@@ -689,67 +717,103 @@ input::placeholder {
         grid-column: 1;
         grid-row: 6;
     }
+    .hebergements-cards .card-subtitle {
+        font-size: 14px;
+    }
 /****** Populaires phone ***********/
-.populaires {
-    order: 1;
-    margin-top: 2.3rem;
-    margin-left: -1rem;
-  /*  background-color: var(--main-bg-color); */
-}
-.populaires-title {
-    margin-top: 0;
-
-}
-.populaires-cards {
-    display: flex;
-    flex-direction: column;
-}
-.populaires-cards .card {
-    margin-top: 1.1rem;
-    margin-right: -1.3rem;
-}
-.populaires-cards img {
-    width: 37%;
-    height: 8.5rem;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-}
-
-.populaires-cards a {
-    width: 100%;
-}
+    .populaires {
+        order: 1;
+        width: 116%;
+        margin-top: 2.3rem;
+        margin-left: -1rem;
+        padding-bottom: 1rem;
+        background-color: var(--main-bg-color); 
+    }
+    .populaires-title {
+        margin-top: 9%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .populaires-cards {
+        display: flex;
+        flex-direction: column;
+        width: 92%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .populaires-cards .card {
+        margin-top: 1.1rem;
+    }
+    .populaires-cards img {
+        width: 34%;
+        height: 8.5rem;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+    .populaires-cards .card-title {
+        font-size: 16px;
+        font-weight: bolder;
+    }
+    .populaires-cards .card-subtitle {
+        font-size: 14px;
+    }
+    .populaires-cards a {
+        width: 100%;
+    }
 
 /****** Activités phone ***********/
-#activites{
-    margin-top: -1.5rem;
-    padding-bottom: 9%;
-    margin-bottom: 1%;
-}
-.activity {
-    flex-direction: column;
-  }
+    #activites{
+        margin-top: 0;
+        padding-bottom: 9%;
+        margin-bottom: 1%;
+    }
+    .activity {
+        flex-direction: column;
+    }
 
-.activity-card {
-    width: 100%;
-    height: 204px;  
-    margin-bottom: 1rem;
-    margin-left: 4%;
-    margin-right: 4%;
-}
-.activity-card h3 {
-    padding-top: 0;
-}
+    .activity-card {
+        width: 100%;
+        height: 204px;  
+        margin-bottom: 1rem;
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+    .activity-card h3 {
+        padding-top: 0;
+    }
 /****** Footer phone **********/  
-.footer {
-    flex-direction:column;
-    margin-top: 7%;
+    .footer {
+        flex-direction:column;
+        margin-top: 7%;
+    }
+    .footer-content {
+        width: 100%;
+        padding: 1.5rem;
+    }  
+    .footer-content a {
+        width: 100%;
+    }
 }
-.footer-content {
-    width: 100%;
-    padding: 1.5rem;
-}  
-.footer-content a {
-    width: 100%;
-}
-}
+/* Very small devices (watch, less than 364px) */
+@media (max-width: 364px) {
 
+    .search{
+        width: 75%;
+    }
+    .lock {
+        margin-left: 4rem;
+    }
+    input {
+        padding-right: 0;
+        padding-left: 0.5rem;
+    }
+    input::placeholder {
+        font-size: 16px;
+    }
+    .butfilter {
+        width: 100%;
+    }
+    .info {
+        padding-top: 10rem;
+    }
+}
