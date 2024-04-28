@@ -1,4 +1,4 @@
-# booki-starter-pack
+# booki
 
 Projet
 ------
