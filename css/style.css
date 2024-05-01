@@ -25,9 +25,10 @@ body {
     box-sizing: border-box;
     margin-left: auto;
     margin-right: auto;
+    justify-content: center;
     margin-top: 0px;
-    padding-left: 3%;
-    padding-right: 2%;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
 }
 
 a {
@@ -38,6 +39,7 @@ a {
 .section-title {
     margin: 0;
     font-size: 22px;
+    font-weight: bolder;
 }
 
 .card {
@@ -53,6 +55,7 @@ a {
 
 .card-title {
     font-size: 16px;
+    font-weight: bolder;
 }
 
 .euro {
@@ -118,6 +121,7 @@ a {
 .title p {
     margin-top: -0.65rem;
     font-size: 16px;
+    font-weight: 500;
 }
 
 /****** NavSelect ***********/
@@ -145,7 +149,7 @@ a {
 .search{
     display: flex;
     width: 50%;
-    height: 3rem;   
+    height: 3.2rem;   
     padding-top: 1rem;
 }
 
@@ -175,7 +179,7 @@ input {
 
 input::placeholder {
     font-size: 18px;
-    font-weight: bold;
+    font-weight: bolder;
     color: black;
 }
 
@@ -222,7 +226,9 @@ input::placeholder {
     justify-content: left; 
     align-items: center;
     gap: 1%;  
-    padding-top: 1.8rem;   
+    padding-top: 2rem; 
+    width: 100%;  
+    flex-wrap: nowrap;
 }
 .filter h2{
 font-size: 18px;
@@ -241,7 +247,7 @@ font-weight: bolder;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 3px solid var(--main-bg-color); 
+    border: 2.5px solid var(--main-bg-color); 
     border-radius: 25px / 25px; 
     padding-left:1.2%;
     padding-right:1.2%;
@@ -282,7 +288,7 @@ font-weight: bolder;
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 6%;
+    padding-bottom: 60px;
 }
 
 .hebergements-and-populaires section {
@@ -310,7 +316,6 @@ font-weight: bolder;
     grid-template-columns: repeat(3, 30%);
     grid-template-rows: repeat(2, 40%); 
     grid-column-gap: 2.45rem;
-    grid-row-gap: 0;
     margin-top: -1.5rem;
     margin-bottom: -4.5rem;
     align-items: center;
@@ -351,6 +356,10 @@ font-weight: bolder;
     width: 105%;
 }
 
+.hebergements-cards fa-sm {
+display: none;
+}
+
 .hebergements-cards img {
     width: 100%;
     height: 7.3rem; 
@@ -368,6 +377,7 @@ font-weight: bolder;
 .hebergements-cards .card-title {
     margin-top: 10px;
     margin-bottom: 4px;
+    font-weight: bolder;
 }
 
 .hebergements-cards .card-subtitle {
@@ -379,8 +389,8 @@ font-weight: bolder;
 }
 
 .plus {
-    padding-top: 0.1rem;
-    padding-bottom: 4rem;
+    padding-top: 1.7rem;
+    padding-bottom: 5rem;
     font-size: 18px;
     font-weight: bolder;
 }
@@ -434,46 +444,56 @@ font-weight: bolder;
 
 /****** Activités ***********/
 
-#activites {
+.activity {
+    display: flex;
     width: 100%;
-    padding-left: 2rem;
-    margin-top: -1rem;
-    padding-bottom: 3%;
+    height: 32rem;
+    margin-left: 1rem; 
+    flex-wrap: wrap; 
 }
 
-.activity {
-    display: ruby;
-    
+#activites {
+    display: flex;
+    width: 100%;
+    margin-left: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.activity-content {
+    height: 27.5rem;
+    display: flex;
+    width: 98%; 
 }
 
 .activity-card {
-    height: 27.5rem;
-    width: 22.5%;
-    background-color: #ffffff; /* Fond blanc */
-    border-radius: 20px; /* Coins arrondis */
-    filter: drop-shadow(0px 3px 5px rgba(0, 0, 0, 0.1)); /* Ombre portée */
+    flex: 1; 
+    height: 439px; 
+    background-color: white; 
+    border-radius: 20px; 
+    filter: drop-shadow(0px 3px 5px rgba(0, 0, 0, 0.1)); 
     display: flex;
-    flex-direction: column; /* Alignement vertical */
-    margin-left: auto;
-    margin-right: auto;
-    overflow: hidden; /* Cache les choses qui dépassent du div */
+    flex-direction: column; 
+    overflow: hidden; 
+    margin-left: 1.2%;
+    margin-right: 1.2%;
     margin-bottom: 2.5rem;
-
 }
-  
-/* Style pour l'image */
+
 .activity-card img {
-    height: 23.8rem;
+    flex: 1;
+    height: 380px;
     width: 100%;
     object-fit: cover;
 }
   
-/* Style pour le texte */
+
 .activity-card h3 {
     font-size: 16px;
+    font-weight: bolder;
     padding-left: 7%;
-    padding-top: 2%;
+    padding-top: 0.5rem;
 }
+
 
 /* Footer */
 .footer {
@@ -484,7 +504,7 @@ font-weight: bolder;
     justify-content:space-between;
     padding-right: 25%;
     padding-left: 1%;
-    margin-top: 2%;
+    margin-top: 4.5%;
 }
 
 .footer-content {
@@ -519,6 +539,7 @@ font-weight: bolder;
     }
     .butfilter {
         font-size: 14px;
+        font-weight: bolder;
         padding-left:2%;
         padding-right:2%;
         margin-right: 0.6%;
@@ -532,6 +553,9 @@ font-weight: bolder;
  /**** Hebergements tablette *****/
     .hebergements {
         width: 100%;
+    }
+    .plus {
+        padding-bottom: 5.5rem;
     }
  /**** Populaires tablette *****/
     .populaires {
@@ -550,6 +574,7 @@ font-weight: bolder;
     }
     .populaires-cards .card-title {
         font-size: 14px;
+        font-weight: bolder;
     }
     .populaires-cards .card-subtitle {
         font-size: 13px;
@@ -558,8 +583,9 @@ font-weight: bolder;
     .activity {
         display: flex;
         justify-content: space-evenly;
-        width: 100%;
-        padding-left: 0;
+        width: 98%;
+        margin-top: -2rem;
+       
 
     }
     .activity-card {
@@ -572,7 +598,7 @@ font-weight: bolder;
     }
 /****** Footer tablette ******/
     .footer {
-        margin-top: 3%;
+        margin-top: -6.5rem;
     }
     .footer-content {
         padding-left: 2%;
@@ -589,6 +615,8 @@ font-weight: bolder;
     /****** General phone ****/
     .main-container {
         padding-top: 10px;
+        padding-left: 0.6rem;
+        padding-right: 1.3rem;
 
     }
     .section-title {
@@ -624,16 +652,16 @@ font-weight: bolder;
         border-bottom: solid var(--main-bg-color);
         padding-left: 1rem;
         padding-right: 1rem;
-        margin-left: -1rem;
+        margin-left: -1.2rem;
         margin-right: -1rem;
     }
     /****** Search phone **********/
     .search{
         width: 90%;
         justify-content: center;
-        height: 3.2rem; 
-        margin-bottom: -0.5rem;
-        padding-left: 4%;
+        height: 3.3rem; 
+        margin-bottom: -1rem;
+        padding-left: 7%;
     }
     .lock {
         aspect-ratio: 1 / 1;
@@ -650,19 +678,22 @@ font-weight: bolder;
     }
     /****** Filtres phone ***********/
     .filter {
-        height: 8rem;
+        height: 9rem;
         justify-content: center;
-        row-gap: 1rem;
-        padding-bottom: 2.5rem;
+        row-gap: 1.4rem;
+        padding-bottom: 1.5rem;
     }
     .filtitle {
         margin-bottom: -1rem;  
     }
     
     .butfilter {
+        height: 46px;
         width: 40%;
         justify-content: left ;
-        padding-left: 5%;
+        padding-left: 3.5%;
+        padding-right:3.5%;
+        font-size: 13px;
     }
     /****** Info phone ***********/
     .info {
@@ -679,14 +710,18 @@ font-weight: bolder;
     }
     .hebergements-and-populaires section {
         border-radius:0;
-        padding: 0px;
+        padding-top: 0;
+        padding-left: 0;
+        padding-right: 0;
+        margin-right: -10%;
     }
  
     /****** Hebergements phone ***********/
     .hebergements {
         width: 100%;
         order: 2;
-        background-color: white; 
+        background-color: transparent;
+        margin-bottom: -4rem;
     } 
     .hebergements-title {
         margin-top: 2.5rem;
@@ -720,24 +755,25 @@ font-weight: bolder;
     .hebergements-cards .card-subtitle {
         font-size: 14px;
     }
+    
 /****** Populaires phone ***********/
     .populaires {
         order: 1;
-        width: 116%;
+        width: 122%;
         margin-top: 2.3rem;
-        margin-left: -1rem;
-        padding-bottom: 1rem;
+        margin-left: -1.3rem;
         background-color: var(--main-bg-color); 
     }
     .populaires-title {
         margin-top: 9%;
         padding-left: 5%;
         padding-right: 5%;
+        width: 86%;
     }
     .populaires-cards {
         display: flex;
         flex-direction: column;
-        width: 92%;
+        width: 86%;
         padding-left: 5%;
         padding-right: 5%;
     }
@@ -760,23 +796,36 @@ font-weight: bolder;
     .populaires-cards a {
         width: 100%;
     }
+    .populaires-cards fa-star{
+        font-size: 24px;
+    }
 
 /****** Activités phone ***********/
-    #activites{
-        margin-top: 0;
-        padding-bottom: 9%;
-        margin-bottom: 1%;
-    }
     .activity {
-        flex-direction: column;
+        height: 965px; 
+        margin-left: -1rem; 
+        padding-top: 0;
+        align-content: flex-start;
     }
 
+
+    .activity-content {
+        flex-direction: column;
+        height: 845px;
+
+    }
     .activity-card {
         width: 100%;
-        height: 204px;  
+        height: 200px;  /*200*/
         margin-bottom: 1rem;
         margin-left: 4%;
         margin-right: 4%;
+    }
+    .activity-card img {
+        flex: 1;
+        height: 141px;
+        width: 100%;
+        object-fit: cover;
     }
     .activity-card h3 {
         padding-top: 0;
