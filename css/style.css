@@ -14,21 +14,25 @@
 }
 
 body {
-    margin-top: -11px;
     display: flex;
     justify-content: center;
-}
-
-.main-container {
-    width: 100%;
-    max-width: 1440px;
     box-sizing: border-box;
     margin-left: auto;
     margin-right: auto;
-    justify-content: center;
-    margin-top: 0px;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+}
+
+.main-container {
+    display: flex;
+    width: 100%;
+    max-width: 1440px;
+    box-sizing: border-box;
+    margin-top: -9px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 3.3%;
+    padding-right: 2.4%;
+    flex-wrap: wrap;
+    overflow: hidden;
 }
 
 a {
@@ -39,7 +43,7 @@ a {
 .section-title {
     margin: 0;
     font-size: 22px;
-    font-weight: bolder;
+    font-weight: bold;
 }
 
 .card {
@@ -55,7 +59,7 @@ a {
 
 .card-title {
     font-size: 16px;
-    font-weight: bolder;
+    font-weight: bold;
 }
 
 .euro {
@@ -66,40 +70,39 @@ a {
     color: var(--main-bg-color);
 }
 
+header {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
 
-/****** Select ***********/
+/****** Nav ***********/
 .select_all {
     display: flex;
-    justify-content: flex-end;
-    height: 2rem;
+    justify-content: right;
+    height: 38px;
     width: 100%;
-    margin-top: 10px;
-    padding: 0px;
-    gap: 2.7rem;
-
+    gap: 68px;
+    font-size: 16px;
 }
 
 .selected {
-    height: 1rem;
-    width: 7rem;
-    text-align: center;
-    padding-top: 0.7rem;
+    display: flex;
+    padding-top: 17px;
+    height: 100%;
+    width: 113px;
+   
 }
-
-.selected:hover {
-    color: var(--main-color);
-    border-top: solid;
-} 
 
 .unselected {
-    height: 1rem;
-    width: 7rem;
-    text-align: center;
-    padding-top: 0.7rem;
-    margin-right: -1.5rem;
+    display: flex;
+    padding-top: 17px;
+    height: 100%;
+    width: 63px;
+    
 }
 
-.unselected:hover {
+.selected:hover, .unselected:hover {
     color: var(--main-color);
     border-top: solid;
 } 
@@ -107,50 +110,42 @@ a {
 /****** title ***********/
 
 .title {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: -7px;
+}
+.logo {
+    display: flex;
+    width: 100%;
+    height: 19px;
+}
+.logo img {
+    width: 61.09px;
+}   
+
+.subtitle h1 {
+    display: flex;
     font-size: 22px;
+    width: 100%;
+    padding-top: 42px;
 }
 
-.title img {
-    height:19px;
-}
-
-.title h1 {
-    padding-top:0.2rem;
-}
-
-.title p {
-    margin-top: -0.65rem;
+.subtitle p {
+    display: flex;
     font-size: 16px;
     font-weight: 500;
+    width: 100%;
+    margin-top: -11px;
 }
-
-/****** NavSelect ***********/
-.phoneselect_all {
-    display: flex;
-    justify-content: space-between;
-    height: 2rem;
-    visibility: hidden;
-}
-  
-.navselected {
-    height: 2rem;
-    width: 50%;
-    text-align: center;
-    border-color: var(--main-bg-color);
-}
-  
-.navselected:hover {
-    color: var(--main-color);
-    border-bottom: solid;
-} 
 
 /****** Search ***********/
 
 .search{
     display: flex;
-    width: 50%;
-    height: 3.2rem;   
-    padding-top: 1rem;
+    width: 30%;
+    height: 50px;   
+    padding-top: 19px;
 }
 
 .lock {
@@ -158,7 +153,7 @@ a {
     background-color: var(--main-bg-color);
     border-radius: 30% 0 0 30%;
     padding: 1% 1.5%; 
-    width: 2rem;
+    aspect-ratio: 1/1;
     flex-direction: column; 
     justify-content: center; 
     align-items: center;
@@ -171,23 +166,23 @@ a {
 input {
     padding-top: 1.5%;
     padding-bottom: 1.5%;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 6%;
+    padding-right: 3.5%;
     border: 1px solid var(--main-bg-color);
     outline: none;
 }
 
 input::placeholder {
     font-size: 18px;
-    font-weight: bolder;
+    font-weight: bold;
     color: black;
 }
 
 #button {
     background-color: var(--main-color);
     color: white;
-    font-weight: bold;
     font-size: 18px;
+    font-weight: 500;
     border-radius: 0  15px 15px 0;
     padding-left: 1rem;
     border: none;
@@ -226,42 +221,39 @@ input::placeholder {
     justify-content: left; 
     align-items: center;
     gap: 1%;  
-    padding-top: 2rem; 
+    padding-top: 35px; 
     width: 100%;  
     flex-wrap: nowrap;
 }
 .filter h2{
 font-size: 18px;
-font-weight: bolder;
+font-weight: bold;
 }
 .filtitle {
     display: flex;
     justify-content: left; 
     align-items: center;
     gap: 1%;  
-    
 }
-
 .butfilter {
-    height: 2.73rem;
+    height: 45px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     border: 2.5px solid var(--main-bg-color); 
     border-radius: 25px / 25px; 
     padding-left:1.2%;
     padding-right:1.2%;
-    gap: 0.5rem;
-   
+    gap: 15px; 
 }
-
+.butfilter h3 {
+    font-size: 17px;
+    font-weight: bold;
+}
 .butfilter:hover {
     background-color: var(--filter-bg-color);
     color: black;
     cursor: url("../images/curseur/arrow-pointer.png"), default;
 }
-
-
 
 /****** Info ***********/
 .info {
@@ -269,8 +261,8 @@ font-weight: bolder;
     display: flex;
     align-items: center;
     padding-bottom: 0.5rem;
-    margin-top: 2rem;
-    margin-bottom: 1.5rem;
+    margin-top: 30px;
+    margin-bottom: 23px;
 }
 
 .fa-info {
@@ -301,23 +293,22 @@ font-weight: bolder;
 .hebergements {
     width: 65%;
     background-color: var(--main-bg-color);
+    height: 614px;
 }
 
 .hebergements-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 1.5rem;
+    padding-bottom: 11px;
 }
-
 
 .hebergements-grid {
     display: grid;
     grid-template-columns: repeat(3, 30%);
     grid-template-rows: repeat(2, 40%); 
     grid-column-gap: 2.45rem;
-    margin-top: -1.5rem;
-    margin-bottom: -4.5rem;
+    grid-row-gap: 18px;
     align-items: center;
 }
 
@@ -350,15 +341,15 @@ font-weight: bolder;
 .hebergements-cards .card {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     box-sizing: border-box;
-    margin-top: 33px;
+    margin-top: 25px;
     width: 105%;
+    height: 207.25px;
 }
 
 .hebergements-cards img {
     width: 100%;
-    height: 7.3rem; 
+    height: 110px; 
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
@@ -366,52 +357,54 @@ font-weight: bolder;
 .hebergements-cards .card-content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     padding-left: 1rem;
 }
 
 .hebergements-cards .card-title {
-    margin-top: 10px;
-    margin-bottom: 4px;
-    font-weight: bolder;
+    margin-top: 9px;
+    margin-bottom: 7px;
+    font-weight: bold;
 }
 
 .hebergements-cards .card-subtitle {
     margin: 0;
+    font-size: 14px;
 }
 
 .hebergements-cards .card-rating {
-    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 .plus {
-    padding-top: 1.7rem;
-    padding-bottom: 5rem;
+    padding-top: 5px;
+    padding-bottom: 22px;
     font-size: 18px;
-    font-weight: bolder;
+    font-weight: bold;
 }
 
 /****** Populaires ***********/
-.populaires {
+.populaires { 
     width: 32%;
-    margin-left: 2rem;
+    margin-left: 3%;
     background-color: var(--main-bg-color);
+    height: 614px;
 }
 
 .populaires-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: -2px;
 }
 
 .populaires-cards .card {
     display: flex;
-    margin-top: 33px;
+    margin-top: 28px;
 }
 
 .populaires-cards img {
     width: 33%;
-    height: 8rem;
+    height: 133px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
@@ -421,7 +414,6 @@ font-weight: bolder;
     padding-left: 15px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     box-sizing: border-box;
 }
 
@@ -442,22 +434,27 @@ font-weight: bolder;
 
 .activity {
     display: flex;
-    margin-left: 1rem; 
     flex-wrap: wrap; 
+    margin-top: 6px;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
 }
 
 #activites {
     display: block;
     width: 100%;
-    margin-left: 0.5rem;
-    margin-bottom: 1rem;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 22px;
 }
 
 .activity-content {
     height: 439px;
     display: flex;
-    width: 95%; 
-
+    justify-content: space-between;
+    gap: 2.4%;
+    margin-left: 0.8%;
+    margin-right: 0.8%;
 }
 
 .activity-card {
@@ -468,8 +465,6 @@ font-weight: bolder;
     display: flex;
     flex-direction: column; 
     overflow: hidden; 
-    margin-left: 1.2%;
-    margin-right: 1.2%;
 }
 
 .activity-card img {
@@ -482,13 +477,13 @@ font-weight: bolder;
 .activity-card-content {
     display: flex;
     flex-direction: column;
-    height: 51px; 
+    height: 58px; 
     justify-content: center;
 }
 
 .activity-card-content h3 {
     font-size: 16px;
-    font-weight: bolder;
+    font-weight: bold;
     padding-left: 19px;
 }
 
@@ -497,23 +492,24 @@ font-weight: bolder;
 /* Footer */
 .footer {
     display: flex;
+    flex-wrap: wrap;
     flex-direction:row;
     background-color: var(--main-bg-color);
-    box-sizing: border-box;
-    justify-content:space-between;
-    padding-right: 25%;
-    padding-left: 1%;
-    margin-top: 4.5%;
+    width: 275%;
+    margin-top: 65px;
+    padding-left: 5%;
+    padding-bottom: 1.5%;
+    gap: 19%;
 }
 
 .footer-content {
     display: flex;
     flex-direction:column;
     line-height: 5%;
-    padding-top: 1.5%;
+    padding-top: 1%;
 }  
 #assistance {
-    margin-right: -2%;
+    padding-left: 1.8%; 
 }  
 
 
@@ -524,70 +520,141 @@ font-weight: bolder;
 @media (max-width: 1024px) {
 
 /****** General tablette *******/
-    .main-container {
-        padding-left: 4%;
-    }
 
+.main-container {
+    padding-left: 5%;
+    padding-right: 1%;
+    max-width: 1024px;    
+}
+/****** Nav ***********/
+.select_all {
+    font-weight: 500;
+    padding-right: 2.5%;
+}
+/****** title tablette *********/
+.subtitle h1 {
+    font-weight: bold;
+}
+/****** Search tablette *********/
+
+.search{
+    width: 50%;
+    padding-top: 29px;
+}
 /****** Filtres tablette *******/
-    .filter {
-
-        flex-wrap: wrap;
+.filter {
+    flex-wrap: wrap;
+    padding-top: 18px; 
+}
+.filter h2{
+    font-size: 18px;
+    font-weight: bold;
     }
-    .filtitle {
-        width: 1024px;
-    }
-    .butfilter {
-        font-size: 14px;
-        font-weight: bolder;
-        padding-left:2%;
-        padding-right:2%;
-        margin-right: 0.6%;
-    }
+.filtitle {
+    width: 100%;
+}
+.butfilter {
+    padding-left:1.5%;
+    padding-right:1.8%;
+    margin-top: 7px;
+    margin-right: 0.6%;
+}
+.butfilter h3 {
+    font-size: 16px;
+}
+/****** Info tablette ***********/
+.info {
+    margin-top: 33px;
+}
 /* Hebergements And Populaires tablette */
     .hebergements-and-populaires {
         flex-direction: column;
+        padding-top: 2px;
         margin-bottom: 2rem;
-        margin-right: 1.1rem;
     }
  /**** Hebergements tablette *****/
     .hebergements {
+        width: 98%;
+        height: 611.5px;
+    }
+    .hebergements-title {
+        padding-bottom: 8px;
+    }
+    .hebergements-grid {
+        grid-row-gap: 12.5px;
+    }
+    .hebergements-cards {
+        width: 98%;
+    }
+    .hebergements-cards .card {
+        height: 207.25px;
+    }
+    .hebergements-cards img {
         width: 100%;
+        height: 114px; 
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
     }
     .plus {
-        padding-bottom: 5.5rem;
+        padding-top: 12px;
+        padding-bottom: 40px;
     }
  /**** Populaires tablette *****/
     .populaires {
-        width: 100%;
+        width: 98%;
         margin-top: 50px;
         margin-left: 0;
-
+        height: 252px;
+    }
+    .populaires-title {
+        margin-top: 2px;
     }
     .populaires-cards {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        gap: 4%;
+    }
+    .populaires-cards .card {
+        margin-top: 18px;
+        height: 137px;
+        width: 102%;
+    }
+    .populaires-cards img {
+        height: 137px;
     }
     .populaires-cards a {
         width: 30%;
     }
     .populaires-cards .card-title {
-        font-size: 14px;
-        font-weight: bolder;
+        font-size: 16px;
+        font-weight: bold;
     }
     .populaires-cards .card-subtitle {
-        font-size: 13px;
+        font-size: 14px;
+    }
+    .populaires-cards .card-rating {
+        margin-top: 50px;
+        letter-spacing: -2px;
     }
 /**** Activités tablette *****/
     .activity {
         display: flex;
-        justify-content: space-evenly;
-        width: 98%;
-        margin-top: -2rem;    
+        width: 93%;
+        margin-top: -25px;   
+        margin-left: 2.6%;
+        margin-right: 2.6%;
+
+    }
+    #activites {
+        margin-bottom: 26px;
+    }
+    .activity-content {
+        height: 270px;
+        gap: 3.2%;
     }
     .activity-card {
-        width: 12rem;
-        height: 17rem;
+        height: 270px;
+        width: 80%;
     }
     .activity-card img {
         height: 200px;
@@ -598,13 +665,11 @@ font-weight: bolder;
     }
 /****** Footer tablette ******/
     .footer {
-        margin-top: -6.5rem;
+        width: 187%;
+        gap: 15%;
     }
-    .footer-content {
-        padding-left: 2%;
-    } 
     #assistance {
-        margin-right: -11%;
+        padding-left: 1%;
     }  
 }
 
@@ -613,62 +678,93 @@ font-weight: bolder;
 @media (max-width: 767.98px) {
 
     /****** General phone ****/
+  
     .main-container {
-        padding-top: 10px;
-        padding-left: 0.6rem;
-        padding-right: 1.3rem;
-
+        max-width: 767.98px;
+        padding: 0;
+        overflow: hidden;
     }
     .section-title {
         text-align: center;
     }
 
-    
+
     /****** title phone ******/
 
     .title {
-        margin-top: 2rem;
+        padding: 0;
+        margin: 0;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     .logo {
-        display: flex;
+        order: 0;
         justify-content: center;
-        height:19px;
-        padding-bottom: 2rem;
+        margin-bottom: 10px;
+    }
+    .logo img {
+        height: 19px;
+        width: 61.09px;
+    }
+    .subtitle {
+        order: 3;
+        padding-top: 20px;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .subtitle h1 {
+        padding-top: 15px;
     }
 
-    .title h1 {
-        padding-top:0;
-    }
-
-    /****** Select phone*******/
+    /****** Nav phone*******/
     .select_all {
-        display: none;
+        order: 1;
+        height: 38px;
+        width: 100%;
+        gap: 0px;  
+        justify-content: center;
     }
-    /****** NavSelect phone ****/
-    .phoneselect_all {
-        visibility: visible;
-        width: 105%;
-        font-size: 16px;
-        border-bottom: solid var(--main-bg-color);
-        padding-left: 1rem;
-        padding-right: 1rem;
-        margin-left: -1.2rem;
-        margin-right: -1rem;
+    
+    .selected {
+        width: 50%;
+        justify-content: center; 
+        align-items: center;
+        border-bottom: var(--main-bg-color) 2px solid;
     }
+    
+    .unselected {
+        width: 50%;
+        margin-right: -20px;
+        justify-content: center; 
+        align-items: center;
+        border-bottom: var(--main-bg-color) 2px solid;
+    }
+    .selected a, .unselected a{
+  
+        text-align: center;
+    }  
+    
+    .selected:hover, .unselected:hover {
+        color: var(--main-color);
+        border-top: transparent;
+        border-bottom: 2px solid;
+    } 
     /****** Search phone **********/
     .search{
         width: 90%;
         justify-content: center;
-        height: 3.3rem; 
-        margin-bottom: -1rem;
-        padding-left: 7%;
+        margin-bottom: 3px;
+        margin-top: -5px;
+        padding-left: 5%;
     }
     .lock {
         aspect-ratio: 1 / 1;
         padding: 2.5%;
     }
     input {
-        padding-right: 4.5rem;
+        padding-right: 20%;
     }
     #button{
         display: none;
@@ -678,22 +774,32 @@ font-weight: bolder;
     }
     /****** Filtres phone ***********/
     .filter {
-        height: 9rem;
+        height: 161px; 
         justify-content: center;
-        row-gap: 1.4rem;
-        padding-bottom: 1.5rem;
+        row-gap: 15px;
+        column-gap: 10px;
     }
     .filtitle {
-        margin-bottom: -1rem;  
+        margin-bottom: -20px;  
+        padding-left: 5%;
     }
     
     .butfilter {
         height: 46px;
-        width: 40%;
+        width: 36%;
         justify-content: left ;
         padding-left: 3.5%;
         padding-right:3.5%;
-        font-size: 13px;
+    }
+    .butfilter h3 {
+        font-size: 14px;
+        font-weight: bold;
+    } 
+    .fa-money-bill-wave, .fa-fire {
+        font-size: 20px;
+    }
+    .fa-person {
+        font-size: 23px;
     }
     /****** Info phone ***********/
     .info {
@@ -724,13 +830,18 @@ font-weight: bolder;
         margin-bottom: -4rem;
     } 
     .hebergements-title {
-        margin-top: 2.5rem;
-        padding-bottom: 01rem;
+        margin-top: 35px;
+        padding-bottom: 0px;
+        padding-left: 5%;
+        padding-right: 5%;
     }
     .hebergements-grid {
         grid-template-columns: repeat(1, 100%);
         grid-template-rows: repeat(6, 15%); 
-        height: 91rem;
+        grid-row-gap: 10px;
+        height: 1435.5px;
+        padding-left: 5%;
+        padding-right: 5%;
     }
     .hebergements-2 {
         grid-column: 1;
@@ -759,16 +870,19 @@ font-weight: bolder;
 /****** Populaires phone ***********/
     .populaires {
         order: 1;
-        width: 122%;
-        margin-top: 2.3rem;
-        margin-left: -1.3rem;
-        background-color: var(--main-bg-color); 
+        width: 100%;
+        height: 569px;
+        margin-top: 30px;
     }
     .populaires-title {
-        margin-top: 9%;
+        margin-top: 7%;
         padding-left: 5%;
-        padding-right: 5%;
         width: 86%;
+        font-weight: bold;
+    }
+    .fa-chart-line {
+        font-size: 18px;
+        margin-right: -5%;
     }
     .populaires-cards {
         display: flex;
@@ -788,7 +902,7 @@ font-weight: bolder;
     }
     .populaires-cards .card-title {
         font-size: 16px;
-        font-weight: bolder;
+        font-weight: bold;
     }
     .populaires-cards .card-subtitle {
         font-size: 14px;
@@ -802,24 +916,31 @@ font-weight: bolder;
 
 /****** Activités phone ***********/
     .activity {
-        height: 965px; 
-        margin-left: -1rem; 
-        padding-top: 0;
-        align-content: flex-start;
+        width: 100%;
+        height: 965.02px; 
+        margin-top: 890px;
+        padding: 0;
     }
 
-
+    #activites h2 {
+        margin: 0;
+        margin-bottom: -12px;
+        text-align: left;
+    }
     .activity-content {
         flex-direction: column;
         height: 845px;
+        margin-left: 6%;
+        margin-right: 6%;
+        width: 89%;
+        gap: 10px;
 
     }
     .activity-card {
         width: 100%;
-        height: 200px;  /*200*/
-        margin-bottom: 1rem;
-        margin-left: 4%;
-        margin-right: 4%;
+        height: 200px;  
+        margin-bottom: 5px;
+
     }
     .activity-card img {
         flex: 1;
@@ -832,8 +953,9 @@ font-weight: bolder;
     }
 /****** Footer phone **********/  
     .footer {
+        order: 4;
         flex-direction:column;
-        margin-top: 7%;
+        margin-top: 17%;
     }
     .footer-content {
         width: 100%;
@@ -841,28 +963,5 @@ font-weight: bolder;
     }  
     .footer-content a {
         width: 100%;
-    }
-}
-/* Very small devices (watch, less than 364px) */
-@media (max-width: 364px) {
-
-    .search{
-        width: 75%;
-    }
-    .lock {
-        margin-left: 4rem;
-    }
-    input {
-        padding-right: 0;
-        padding-left: 0.5rem;
-    }
-    input::placeholder {
-        font-size: 16px;
-    }
-    .butfilter {
-        width: 100%;
-    }
-    .info {
-        padding-top: 10rem;
     }
 }
