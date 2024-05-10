@@ -91,7 +91,6 @@ header {
     padding-top: 17px;
     height: 100%;
     width: 113px;
-   
 }
 
 .unselected {
@@ -99,7 +98,6 @@ header {
     padding-top: 17px;
     height: 100%;
     width: 63px;
-    
 }
 
 .selected:hover, .unselected:hover {
@@ -128,15 +126,15 @@ header {
     display: flex;
     font-size: 22px;
     width: 100%;
-    padding-top: 42px;
+    padding-top: 45px;
 }
 
 .subtitle p {
     display: flex;
     font-size: 16px;
+    line-height: 5px;
     font-weight: 500;
-    width: 100%;
-    margin-top: -11px;
+    width: 100%;  
 }
 
 /****** Search ***********/
@@ -145,7 +143,7 @@ header {
     display: flex;
     width: 32%;
     height: 50px;   
-    padding-top: 19px;
+    padding-top: 24px;
 }
 
 .lock {
@@ -343,7 +341,7 @@ font-weight: bold;
     flex-direction: column;
     box-sizing: border-box;
     margin-top: 25px;
-    width: 105%;
+    width: 101%;
     height: 207.25px;
 }
 
@@ -539,7 +537,7 @@ font-weight: bold;
 
 .search{
     width: 50%;
-    padding-top: 29px;
+    padding-top: 25px;
 }
 .lock {
     width: 50px;
@@ -577,12 +575,11 @@ input {
 }
 /****** Info tablette ***********/
 .info {
-    margin-top: 33px;
+    margin-top: 31px;
 }
 /* Hebergements And Populaires tablette */
     .hebergements-and-populaires {
         flex-direction: column;
-        padding-top: 2px;
         margin-bottom: 2rem;
     }
  /**** Hebergements tablette *****/
@@ -595,9 +592,6 @@ input {
     }
     .hebergements-grid {
         grid-row-gap: 12.5px;
-    }
-    .hebergements-cards {
-        width: 98%;
     }
     .hebergements-cards .card {
         height: 207.25px;
@@ -659,7 +653,7 @@ input {
 
     }
     #activites {
-        margin-bottom: 26px;
+        margin-bottom: 25px;
     }
     .activity-content {
         height: 270px;
@@ -817,7 +811,7 @@ input {
     }
     /****** Info phone ***********/
     .info {
-        padding-top: 1rem;
+        padding-top: 25px;
         padding-bottom: 0;
         margin-bottom: 0;
         padding-left: 5%;
@@ -854,7 +848,7 @@ input {
     .hebergements-grid {
         grid-template-columns: repeat(1, 100%);
         grid-template-rows: repeat(6, 15%); 
-        grid-row-gap: 10px;
+        grid-row-gap: 8px;
         height: 1435.5px;
         padding-left: 5%;
         padding-right: 5%;
@@ -888,7 +882,7 @@ input {
         order: 1;
         width: 100%;
         height: 569px;
-        margin-top: 30px;
+        margin-top: 35px;
     }
     .populaires-title {
         margin-top: 7%;
@@ -932,7 +926,7 @@ input {
 
 /****** Activités phone ***********/
     .activity {
-        width: 100%;
+        width: 95%;
         height: 965.02px; 
         margin-top: 890px;
         padding: 0;
@@ -975,7 +969,8 @@ input {
     }
     .footer-content {
         width: 100%;
-        padding: 1.5rem;
+        padding: 1rem;
+        margin-top: 0.5rem;
     }  
     .footer-content a {
         width: 100%;
