@@ -173,6 +173,11 @@ input::placeholder {
     font-weight: 900;
     color: black;
 }
+input::-moz-placeholder {
+    text-indent: 10%;
+    color: black;
+    opacity: 1;
+}
 
 #button {
     width: 150px;
