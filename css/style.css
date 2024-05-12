@@ -21,6 +21,15 @@ body {
     margin-right: auto;
 }
 
+main {
+    width: 100%;
+}
+
+footer{
+    width: 100%;
+    max-width: 1440px;
+}
+
 .main-container {
     display: flex;
     width: 100%;
@@ -188,7 +197,7 @@ input::-moz-placeholder {
     border-radius: 0  15px 15px 0;
     border: none;
     outline: none;
-    cursor: url("../images/curseurs/arrow-pointer.png"), default;
+    cursor: default;
 }
 
 .fa-magnifying-glass {
@@ -214,7 +223,7 @@ input::-moz-placeholder {
     align-content: center;
     text-align: center;
     filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.4)); /* Ombre portée */
-    cursor: url("../images/curseurs/arrow-pointer_t.png"), default;
+    cursor: default;
 }
 
 /****** Filtres ***********/
@@ -255,7 +264,7 @@ font-weight: bold;
 .butfilter:hover {
     background-color: var(--filter-bg-color);
     color: black;
-    cursor: url("../images/curseurs/arrow-pointer.png"), default;
+    cursor: default;
 }
 
 /****** Info ***********/
@@ -496,11 +505,10 @@ font-weight: bold;
 .footer {
     display: flex;
     flex-wrap: wrap;
-    flex-direction:row;
     background-color: var(--main-bg-color);
-    width: 275%;
+    width: 98%;
     margin-top: 65px;
-    padding-left: 5%;
+    padding-left: 1.8%;
     padding-bottom: 1.5%;
     gap: 19%;
 }
@@ -529,6 +537,7 @@ font-weight: bold;
     padding-right: 1%;
     max-width: 1024px;    
 }
+
 /****** Nav ***********/
 .select_all {
     font-weight: 500;
@@ -552,7 +561,7 @@ input {
 }
 #button {
     width: 135px;
-    cursor: url("../images/curseurs/arrow-pointer_t.png"), default;
+    cursor: default;
 }
 /****** Filtres tablette *******/
 .filter {
@@ -576,7 +585,7 @@ input {
     font-size: 16px;
 }
 .butfilter:hover {
-    cursor: url("../images/curseurs/arrow-pointer_t.png"), default;
+    cursor: default;
 }
 /****** Info tablette ***********/
 .info {
@@ -676,13 +685,12 @@ input {
         height: 70px; 
     }
 /****** Footer tablette ******/
+
     .footer {
-        width: 187%;
-        gap: 15%;
+        width: 95%;
+        padding-left: 2%;
+        gap: 14%;
     }
-    #assistance {
-        padding-left: 1%;
-    }  
 }
 
 /* Small devices (phones, less than 768px) */
@@ -699,12 +707,9 @@ input {
     .section-title {
         text-align: center;
     }
-
-    /****** Nav ***********/
-.select_all {
-    height: 33px;
-}
-
+    footer{
+        width: 100%;
+    }
     /****** title phone ******/
 
     .title {
@@ -977,6 +982,7 @@ input {
 /****** Footer phone **********/  
     .footer {
         order: 4;
+        width: 100%;
         flex-direction:column;
         margin-top: 17%;
     }
@@ -985,7 +991,6 @@ input {
         padding: 1rem;
         margin-top: 0.5rem;
     }  
-    .footer-content a {
-        width: 100%;
-    }
+    #assistance {
+        padding-left: 5%; 
 }
